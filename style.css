@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: var(--Cream);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sub-container {
+  width: 90%;
+  height: 92%;
+  background-color: var(--White);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.img-container {
+  width: 100%;
+  height: 40%;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.text-container {
+  width: 100%;
+  height: 60%;
+  padding: 0 1.4rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+}
+.title p {
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  /* margin-bottom: 0.5rem; */
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.details {
+  width: 100%;
+  /* padding: 0 1rem; */
+  margin-left: 0.5rem;
+}
+.details h4 {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  /* font-weight: 500; */
+  line-height: 2rem;
+}
+.details p {
+  margin-top: .9rem;
+  /* padding: 0 .1rem; */
+  font-family: "Montserrat", sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.details p > span {
+  text-transform: uppercase;
+}
+
+.price {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  /* justify-content: space-around; */
+}
+.price h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2.2rem;
+  /* font-weight: 700; */
+  color: var(--Dark-cyan);
+}
+.price h4 {
+  /* margin-left: 1.2rem; */
+  color: var(--Dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+}
+
+.button {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+  background-color: var(--Dark-cyan);
+  font-family: "Montserrat", sans-serif;
+  color: var(--White);
+  /* font-weight: 600; */
+  font-size: 1rem;
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.button .btn > img {
+  margin-right: 0.5rem;
+}
+
+/* desktop */
+.desktop-image {
+  display: none;
+}
+.desktop-para {
+  display: none;
+}
+.details .desktop-heading {
+  display: none;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .mobile-image {
+    display: none;
+  }
+
+  .mobile-para {
+    display: none;
+  }
+
+  .sub-container {
+    width: 550px;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  .desktop-image {
+    display: block;
+    height: 100%;
+    /* overflow-y: hidden; */
+  }
+  .desktop-image img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .title p {
+    font-size: 0.7rem;
+  }
+
+  .details .mobile-heading {
+    display: none;
+  }
+  .details .desktop-heading {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .details .desktop-para {
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .price {
+    margin-top: 1.5rem;
+  }
+  .price h2 {
+    font-size: 1.6rem;
+  }
+  .price h4 {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    margin-top: 1.5rem;
+  }
+  .button .btn {
+    font-size: 0.8rem;
+  }
+}
